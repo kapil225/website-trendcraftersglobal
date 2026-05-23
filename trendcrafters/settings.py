@@ -22,7 +22,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config(
     'ALLOWED_HOSTS',
-    default='localhost,127.0.0.1,yourdomain.com,www.yourdomain.com'
+    default='localhost,127.0.0.1,trendcrafters.global,www.trendcrafters.global'
 ).split(',')
 
 # During local development it's convenient to allow all hosts when DEBUG is True
@@ -34,11 +34,9 @@ if DEBUG:
     ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://yourdomain.com',
-    'https://www.yourdomain.com',
-    'https://*.yourdomain.com',  # For subdomains if needed
+    'https://trendcrafters.global',
+    'https://www.trendcrafters.global',
 ]
-
 # -----------------------------------------------------------
 # APPLICATION DEFINITION
 # -----------------------------------------------------------
