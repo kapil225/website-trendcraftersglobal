@@ -1,0 +1,102 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Brand Campaigns — Trend Crafters</title>
+</head>
+
+<body class="bg-[#050509] text-gray-100">
+  <!-- Navbar -->
+  <nav class="p-4 sm:p-6">
+    <a href="/" class="text-amber-400 font-bold text-lg tracking-wide">Trend Crafters</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="pt-8 pb-12 sm:pt-12 sm:pb-20">
+    <div class="w-full px-4 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+        <div data-aos="fade-right">
+          <h1 class="text-3xl sm:text-5xl font-extrabold mb-4 leading-tight">Brand Campaigns <br> That Move People</h1>
+          <p class="text-gray-300 max-w-xl mb-6 text-base sm:text-base">We create integrated campaigns that bring your brand story to life across digital, social, print, and beyond, built to inspire, engage, and convert.</p>
+          <a href="/contact" class="btn-primary text-sm sm:text-base">Talk Campaigns</a>
+        </div>
+        <div data-aos="fade-left" class="rounded-2xl overflow-hidden shadow-2xl mt-6 sm:mt-0">
+          <img src="https://media.istockphoto.com/id/1492180527/photo/digital-marketing-commerce-online-sale-concept-promotion-of-products-or-services-through.jpg?s=612x612&w=0&k=20&c=s4lmSNsWc6q5ObaiC3Gk_bn-gosVTYn4rukKwa0SE8U="
+               alt="campaign" class="w-full h-64 sm:h-80 md:h-[420px] object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Our Approach -->
+  <section class="py-12 sm:py-16 bg-[#0b0b0d] border-y border-gray-800">
+    <div class="w-full px-4 sm:px-6 text-center" data-aos="fade-up">
+      <h2 class="text-2xl sm:text-3xl font-bold text-amber-400 mb-4">Our Approach to Campaigns</h2>
+      <p class="text-gray-400 max-w-3xl mx-auto mb-8 sm:mb-10 text-sm sm:text-base">From insights to execution, our campaigns follow a creative and data-driven journey that ensures every message resonates and delivers measurable results.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 text-left">
+        <div class="service-card hover:translate-y-[-4px] transition-all duration-300">
+          <h4 class="font-semibold text-base sm:text-lg text-amber-300">1. Strategy & Insight</h4>
+          <p class="text-gray-400 mt-2 text-xs sm:text-sm">We begin by identifying your target audience, competition, and positioning — crafting campaign goals that align with your brand story.</p>
+        </div>
+        <div class="service-card hover:translate-y-[-4px] transition-all duration-300">
+          <h4 class="font-semibold text-base sm:text-lg text-amber-300">2. Creative Development</h4>
+          <p class="text-gray-400 mt-2 text-xs sm:text-sm">Our team produces compelling visuals, scripts, and narratives that translate strategy into emotion and engagement.</p>
+        </div>
+        <div class="service-card hover:translate-y-[-4px] transition-all duration-300">
+          <h4 class="font-semibold text-base sm:text-lg text-amber-300">3. Execution & Optimization</h4>
+          <p class="text-gray-400 mt-2 text-xs sm:text-sm">We deploy across multi-channel platforms — tracking, analyzing, and optimizing for maximum ROI and sustained momentum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campaign Services -->
+  <section class="py-12 sm:py-16">
+    <div class="w-full px-4 sm:px-6 max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-2xl sm:text-3xl text-amber-400 mb-6 sm:mb-8 font-bold">Our Campaign Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+        <div class="service-card hover:scale-105 transition">
+          <h4 class="font-semibold text-base sm:text-lg">Broadcast</h4>
+          <p class="text-gray-400 mt-3 text-xs sm:text-sm">Full-service production for cinematic brand films, ad spots, and storytelling across digital platforms.</p>
+        </div>
+        <div class="service-card hover:scale-105 transition">
+          <h4 class="font-semibold text-base sm:text-lg">Social Launch</h4>
+          <p class="text-gray-400 mt-3 text-xs sm:text-sm">Creative rollout across Reels, TikToks, and paid ads, connecting directly with audiences where they engage most.</p>
+        </div>
+        <div class="service-card hover:scale-105 transition">
+          <h4 class="font-semibold text-base sm:text-lg">OOH & Retail</h4>
+          <p class="text-gray-400 mt-3 text-xs sm:text-sm">Design and strategy for billboards, banners, and in-store activations that bridge online and offline experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-12 sm:py-20">
+    <div class="w-full px-4 sm:px-6 max-w-4xl mx-auto text-center" data-aos="fade-up">
+      <h3 class="text-2xl sm:text-3xl font-semibold text-amber-400 mb-4 sm:mb-6">What Our Clients Say</h3>
+      <p class="text-gray-400 italic mb-6 sm:mb-8 text-sm sm:text-base">"Trend Crafters turned our seasonal campaign into an unforgettable experience. Their creativity and data insights delivered real impact."</p>
+      <p class="font-semibold text-white text-sm sm:text-base">— Marketing Head, Threads & Trends</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 sm:py-16 text-center bg-[#0b0b0d] border-t border-gray-800" data-aos="fade-up">
+    <div class="w-full px-4 sm:px-6">
+      <h3 class="text-xl sm:text-2xl font-bold text-amber-400">Ready to Launch Your Next Campaign?</h3>
+      <p class="text-gray-400 mt-3 text-sm sm:text-base">Let's collaborate to create a campaign that connects your brand with the right audience, and makes an impact that lasts.</p>
+      <div class="mt-4 sm:mt-6">
+        <a href="/contact" class="btn-primary text-sm sm:text-base">Request a Proposal</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,364 @@
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+    .container, .w-full {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    /* Ensure images and videos don't cause overflow */
+    img, video {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    /* Fixed video containers for mobile */
+    .video-container-mobile {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw !important;
+        margin-right: -50vw !important;
+    }
+    
+    .video-container-mobile video {
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100vw !important;
+        object-fit: contain !important;
+    }
+    
+    /* Adjust spacing for mobile */
+    .gap-16 {
+        gap: 2rem;
+    }
+    
+    .gap-12 {
+        gap: 1.5rem;
+    }
+    
+    .gap-8 {
+        gap: 1rem;
+    }
+    
+    /* Remove padding from video parent containers */
+    .video-parent {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+    }
+    
+    /* Fix text sizes for mobile */
+    .text-5xl, .text-6xl {
+        font-size: 2.5rem;
+    }
+    
+    .text-4xl {
+        font-size: 2rem;
+    }
+    
+    .text-3xl {
+        font-size: 1.875rem;
+    }
+    
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+    
+    /* Adjust hero image height */
+    .h-\[420px\] {
+        height: 300px;
+    }
+    
+    /* Project container mobile layout */
+    .project-container:not(.expanded) {
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+    
+    .project-container:not(.expanded) .project-video,
+    .project-container:not(.expanded) .project-content {
+        width: 100% !important;
+    }
+    
+    .project-container:not(.expanded) .project-video {
+        height: 200px;
+    }
+    
+    .project-container:not(.expanded) .project-content {
+        height: auto;
+        min-height: 120px;
+    }
+    
+    /* Expanded mobile layout */
+    .project-container.expanded .project-video {
+        padding-top: 20px;
+        width: 100vw !important;
+        height: 60vh !important;
+    }
+    
+    .project-container.expanded .project-content {
+        width: 100% !important;
+        height: 40vh !important;
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* Tablet and small desktop devices (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .content-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .container, .w-full {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .project-container {
+        flex-direction: row;
+        margin: 0 2rem;
+    }
+    
+    .project-container .project-video {
+        width: 66.666% !important;
+        height: 100% !important;
+    }
+    
+    .project-container .project-content {
+        width: 33.333% !important;
+        height: 100% !important;
+    }
+    
+    .close-button {
+        display: none;
+    }
+    
+    /* Video fixes for tablet */
+    .video-container-mobile video {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 400px !important;
+        object-fit: contain !important;
+    }
+}
+
+/* Desktop devices (1024px and above) */
+@media (min-width: 1024px) {
+    .content-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .container, .w-full {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+/* About Page Mobile Styles */
+@media (max-width: 767px) {
+    .hero-mobile {
+        min-height: 50vh;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .ceo-section .grid {
+        gap: 2rem;
+    }
+    
+    .ceo-text {
+        padding: 1rem 1rem;
+        order: 2;
+    }
+    
+    .ceo-image-container {
+        order: 1;
+        padding: 0 1rem;
+    }
+    
+    .ceo-quote {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .ceo-quote p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .ceo-image {
+        height: 300px !important;
+        width: 100% !important;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .video-container-mobile video {
+        height: 250px !important;
+        border-radius: 0.5rem;
+    }
+    
+    /* Service grid mobile */
+    #services .grid {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    #services .service-item {
+        padding: 1.5rem;
+    }
+    
+    #services h3 {
+        font-size: 1.25rem;
+    }
+    
+    /* Partner grid mobile */
+    .partner-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .partner-card img {
+        height: 200px;
+    }
+    
+    /* Vision & Mission mobile */
+    .vision-mission-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .vision-card, .mission-card {
+        padding: 1.5rem;
+    }
+    
+    /* What We Do mobile */
+    .what-we-do-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    /* Text adjustments */
+    .text-justify-mobile {
+        text-align: justify;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+    }
+    
+    /* Reduce padding on mobile */
+    .py-medium {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .py-compact {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    /* Floating gradients mobile */
+    .absolute.top-10.left-10.w-96.h-96,
+    .absolute.bottom-10.right-10.w-96.h-96 {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    
+    /* Partner images mobile fix */
+    .partner-card img.pl-\[60px\] {
+        padding-left: 0 !important;
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover;
+    }
+}
+
+/* Tablet-specific styles for About Page */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .ceo-section .grid {
+        padding: 0 2rem;
+    }
+    
+    .ceo-text, .ceo-quote {
+        padding: 0 2rem;
+    }
+    
+    #services .grid,
+    .partner-grid,
+    .vision-mission-grid,
+    .what-we-do-grid {
+        padding: 0 2rem;
+    }
+    
+    .text-justify-mobile {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ceo-image {
+        height: 250px !important;
+    }
+    
+    .video-container-mobile video {
+        height: 200px !important;
+    }
+    
+    #services .service-item {
+        padding: 1rem;
+    }
+    
+    #services h3 {
+        font-size: 1.1rem;
+    }
+    
+    .feature-card {
+        padding: 1rem;
+    }
+    
+    .vision-card, .mission-card {
+        padding: 1rem;
+    }
+    
+    /* Text sizes for very small screens */
+    .text-3xl {
+        font-size: 1.75rem;
+    }
+    
+    .text-4xl {
+        font-size: 2rem;
+    }
+    
+    .text-lg {
+        font-size: 1rem;
+    }
+}

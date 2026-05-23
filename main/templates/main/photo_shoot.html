@@ -1,0 +1,163 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Photo Shoot — Trend Crafters</title>
+</head>
+<body class="bg-[#050509] text-gray-100">
+  <nav class="p-4 sm:p-6">
+    <a href="#" class="text-amber-400 font-bold text-lg">Trend Crafters</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="pt-8 pb-12 sm:pt-12 sm:pb-16">
+    <div class="w-full px-4 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+        <div data-aos="fade-right">
+          <h1 class="text-3xl sm:text-5xl font-extrabold mb-4">Photo Shoots that Sell</h1>
+          <p class="text-gray-300 max-w-xl mb-6 text-sm sm:text-base">Product photography, lifestyle shoots, and team portraits, crafted to elevate e-commerce, social, and ad campaigns.</p>
+          <a href="/contact" class="btn-primary text-sm sm:text-base">Book a Shoot</a>
+        </div>
+        <div data-aos="fade-left" class="rounded-2xl overflow-hidden mt-6 sm:mt-0">
+          <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGhvdG9zaG9vdHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000" alt="photoshoot" class="w-full h-64 sm:h-80 md:h-[420px] object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- WHAT WE PHOTOGRAPH -->
+  <section class="py-8 sm:py-12">
+    <div class="w-full px-4 sm:px-6 max-w-5xl mx-auto text-center">
+      <h2 class="text-xl sm:text-2xl text-amber-400 mb-4 font-semibold">What We Photograph</h2>
+      <p class="text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">From product hero shots to aspirational lifestyle imagery — we craft visual assets that perform across ads and marketplaces.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div class="glass rounded-xl p-4 sm:p-6 hover:scale-105 transition">
+          <h4 class="font-semibold mb-2 text-sm sm:text-base">E-Commerce</h4>
+          <p class="text-xs sm:text-sm text-gray-300">Clean, consistent product imagery for catalogs and listings.</p>
+        </div>
+        <div class="glass rounded-xl p-4 sm:p-6 hover:scale-105 transition">
+          <h4 class="font-semibold mb-2 text-sm sm:text-base">Lifestyle</h4>
+          <p class="text-xs sm:text-sm text-gray-300">Contextual storytelling shots showing products in real-world settings.</p>
+        </div>
+        <div class="glass rounded-xl p-4 sm:p-6 hover:scale-105 transition">
+          <h4 class="font-semibold mb-2 text-sm sm:text-base">Corporate</h4>
+          <p class="text-xs sm:text-sm text-gray-300">Team portraits, office coverage and professional headshots.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="py-12 sm:py-16 bg-black/30">
+    <div class="w-full px-4 sm:px-6 max-w-6xl mx-auto text-center">
+      <h2 class="text-xl sm:text-2xl font-semibold text-amber-400 mb-6">Why Choose Trend Crafters?</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 text-gray-300">
+        <div data-aos="fade-up" class="glass p-4 sm:p-6 rounded-xl">
+          <div class="text-3xl sm:text-4xl mb-3">📸</div>
+          <h4 class="font-semibold mb-2 text-sm sm:text-base">Creative Direction</h4>
+          <p class="text-xs sm:text-sm">We translate your brand identity into powerful visual storytelling.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="glass p-4 sm:p-6 rounded-xl">
+          <div class="text-3xl sm:text-4xl mb-3">⚡</div>
+          <h4 class="font-semibold mb-2 text-sm sm:text-base">Quick Turnaround</h4>
+          <p class="text-xs sm:text-sm">Fast, organized workflow for reliable delivery every time.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="glass p-4 sm:p-6 rounded-xl">
+          <div class="text-3xl sm:text-4xl mb-3">🎯</div>
+          <h4 class="font-semibold mb-2 text-sm sm:text-base">Brand Focused</h4>
+          <p class="text-xs sm:text-sm">Every frame designed to align with your goals and audience.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="glass p-4 sm:p-6 rounded-xl">
+          <div class="text-3xl sm:text-4xl mb-3">💼</div>
+          <h4 class="font-semibold mb-2 text-sm sm:text-base">Collaborative Process</h4>
+          <p class="text-xs sm:text-sm">We work hand-in-hand with your team from idea to execution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT SHOOTS -->
+  <section class="py-8 sm:py-12">
+    <div class="w-full px-4 sm:px-6">
+      <h3 class="text-xl sm:text-2xl font-semibold text-amber-400 mb-6 text-center">Recent Shoots</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <!-- Existing Images -->
+        <img src="https://www.adorama.com/alc/wp-content/uploads/2016/09/dslr-camera-feature.jpg"
+             alt="Camera setup"
+             class="rounded-xl object-cover h-48 sm:h-64 w-full hover:scale-105 transition-transform duration-500" loading="lazy">
+             
+        <img src="https://images.pexels.com/photos/1557652/pexels-photo-1557652.jpeg?cs=srgb&dl=pexels-lukas-hartmann-304281-1557652.jpg&fm=jpg"
+             alt="Studio photoshoot"
+             class="rounded-xl object-cover h-48 sm:h-64 w-full hover:scale-105 transition-transform duration-500" loading="lazy">
+
+        <!-- Local Images from static -->
+        <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6TomCpyFMgjlypxJUmR56N0dCiHbhoZAYf2rB"
+             alt="Photoshoot 1"
+             class="rounded-xl object-cover h-48 sm:h-64 w-full hover:scale-105 transition-transform duration-500" loading="lazy">
+             
+        <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ65MiXPD7VX79hLCRNjxBDau5rt1OqvepP6G4w"
+             alt="Photoshoot 2"
+             class="rounded-xl object-cover h-48 sm:h-64 w-full hover:scale-105 transition-transform duration-500" loading="lazy">
+             
+        <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6PyNk4QcBVLZyK13jtS9gImdcas7CXprN42ok"
+             alt="Photoshoot 3"
+             class="rounded-xl object-cover h-48 sm:h-64 w-full hover:scale-105 transition-transform duration-500" loading="lazy">
+             
+        <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ65lN99d7VX79hLCRNjxBDau5rt1OqvepP6G4w"
+             alt="Photoshoot 4"
+             class="rounded-xl object-cover h-48 sm:h-64 w-full hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-12 sm:py-16 bg-black/40">
+    <div class="w-full px-4 sm:px-6 max-w-5xl mx-auto text-center">
+      <h3 class="text-xl sm:text-2xl font-semibold text-amber-400 mb-6 sm:mb-8">What Our Clients Say</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div class="glass p-4 sm:p-6 rounded-xl" data-aos="fade-right">
+          <p class="italic text-gray-300 mb-3 text-sm sm:text-base">"Trend Crafters captured our products beautifully — sales increased by 30% after using their images!"</p>
+          <h4 class="text-amber-400 font-semibold text-sm sm:text-base">— Himalayan Java</h4>
+        </div>
+        <div class="glass p-4 sm:p-6 rounded-xl" data-aos="fade-left">
+          <p class="italic text-gray-300 mb-3 text-sm sm:text-base">"They made our team look so professional. The entire process was smooth, fun, and creative."</p>
+          <h4 class="text-amber-400 font-semibold text-sm sm:text-base">— Deepal Nepal</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR PROCESS -->
+  <section class="py-8 sm:py-12">
+    <div class="w-full px-4 sm:px-6 max-w-4xl mx-auto text-center">
+      <h3 class="text-xl sm:text-2xl font-semibold text-amber-400">Our Shoot Process</h3>
+      <ol class="mt-4 sm:mt-6 text-left text-gray-300 list-decimal list-inside space-y-2 sm:space-y-3 text-sm sm:text-base">
+        <li><strong>Brief & Moodboard:</strong> Align creative direction and deliverables.</li>
+        <li><strong>Pre-production:</strong> Locations, props, models and shot lists.</li>
+        <li><strong>Shoot Day:</strong> Fast, organized capture optimized for post.</li>
+        <li><strong>Retouch & Delivery:</strong> Color correction, retouch and final assets for web and print.</li>
+      </ol>
+      <div class="mt-4 sm:mt-6">
+        <a href="/contact" class="btn-primary text-sm sm:text-base">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-12 sm:py-16 bg-gradient-to-r from-amber-500/10 to-red-500/10 text-center">
+    <div class="w-full px-4 sm:px-6 max-w-3xl mx-auto">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-amber-400">Let's Create Something Stunning</h3>
+      <p class="text-gray-300 mb-6 text-sm sm:text-base">Ready to make your brand shine through professional photography? Whether for e-commerce or marketing, we'll bring your vision to life.</p>
+      <a href="/contact" class="btn-primary text-sm sm:text-base">Start Your Project</a>
+    </div>
+  </section>
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,477 @@
+{% extends 'main/base.html' %}
+
+{% block title %}About Us - TrendCrafters{% endblock %}
+{% load static %}
+{% block meta_description %}Learn about TrendCrafters — a creative digital agency offering video & photo shoots, digital marketing, brand campaigns, and web development to help brands grow.{% endblock %}
+{% block og_image %}{% static 'main/images/about-og.jpg' %}{% endblock %}
+{% block canonical %}https://trendcrafters.global/about/{% endblock %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative py-12 sm:py-16 md:py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-black overflow-hidden hero-mobile">
+  <!-- Floating Gradients -->
+  <div class="absolute top-10 left-10 w-72 sm:w-96 h-72 sm:h-96 bg-gradient-to-r from-orange-500/30 to-red-500/30 blur-3xl opacity-30 animate-float"></div>
+  <div class="absolute bottom-10 right-10 w-72 sm:w-96 h-72 sm:h-96 bg-gradient-to-r from-red-500/20 to-orange-500/20 blur-3xl opacity-30 animate-float" style="animation-delay: 3s;"></div>
+
+  <div class="content-container pt-20 px-4 sm:px-6 lg:px-12">
+    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-5">
+        We Craft Digital Experiences
+      </h1>
+      <p class="text-gray-300 text-lg sm:text-xl leading-relaxed">
+        At <span class="text-orange-400 font-semibold">TrendCrafters</span>, we blend creativity, strategy, and innovation to tell stories that inspire. 
+        From concept to creation, our work helps brands make a mark in today's fast-moving digital landscape.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- About Overview + Video Section -->
+<section class="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-black via-gray-900 to-gray-800 relative overflow-hidden">
+  <div class="content-container px-4 sm:px-6 lg:px-12 grid md:grid-cols-2 gap-3 items-center">
+
+    <!-- Text Content -->
+    <div data-aos="fade-right" class="order-1 md:order-1">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">About Us</h2>
+      <p class="text-gray-400 mb-6">
+        <strong>TrendCrafters</strong> is a dynamic broadcasting and media production company that transforms ideas into powerful visual stories. 
+        We specialize in <strong>digital marketing</strong>, <strong>brand storytelling</strong>, <strong>video production</strong>, and <strong>creative visual strategy</strong>
+        helping brands build genuine connections with their audience through engaging content and memorable campaigns.
+      </p>
+
+      <p class="text-gray-400 mb-6 text-justify">
+        Our creative team blends strategy, innovation, and artistry to produce content that not only captures attention but also delivers measurable impact. 
+        From concept development to final delivery, we ensure every project reflects your brand's voice and vision with precision and creativity.
+      </p>
+
+      <ul class="text-gray-300 space-y-2 mb-6">
+        <li>🎥 <strong>Video & Photo Shoots</strong> — High-quality visuals that capture your brand's essence and tell stories that inspire.</li>
+        <li>🚀 <strong>Digital Marketing & Campaigns</strong> — Performance-driven marketing solutions designed to grow engagement and reach.</li>
+        <li>🎯 <strong>Creative Content Strategy</strong> — Strategic storytelling that fuses creativity with business goals for maximum impact.</li>
+        <li>📱 <strong>Reels, Commercials & Ad Management</strong> — Engaging short-form content and campaigns that convert.</li>
+      </ul>
+
+      <p class="text-gray-400 text-justify">
+        At <strong>TrendCrafters</strong>, we believe every brand has a story worth telling. 
+        Our mission is to <span class="text-orange-400 font-semibold">craft that story into a lasting experience</span>, one that inspires, informs, and connects. 
+        Whether you're launching a new product, redefining your identity, or scaling your digital presence, we're here to make every frame count.
+      </p>
+    </div>
+
+    <!-- Video Section -->
+<div class="relative order-2 md:order-2 w-full" data-aos="fade-left">
+  <div class="relative rounded-lg transform hover:scale-105 transition-transform duration-700 overflow-hidden w-[800px] max-w-full mx-auto">
+    <video 
+      id="scrollVideo"
+      src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6ty85HUJicWq1mQnyOL4asx50ZkYJgfulDt9j" 
+      autoplay
+      loop
+      playsinline
+      controls
+      
+      class="w-[600px] 
+             h-[60vh]                /* default mobile/tablet height */
+             sm:h-[60vh] 
+             md:h-[75vh]             /* bigger height in desktop */
+             lg:h-[80vh]             /* optional: even bigger on large screens */
+             object-cover rounded-lg"
+             
+      loading="lazy">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const video = document.getElementById("scrollVideo");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play();   // Play when visible
+          } else {
+            video.pause();  // Pause when not visible
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(video);
+    });
+  </script>
+</section>
+
+<!-- CEO Section -->
+<section class="ceo-section py-12 sm:py-16 md:py-20 bg-gray-900">
+  <div class="content-container px-4 sm:px-6 lg:px-12">
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+      <!-- Text Content -->
+      <div class="ceo-text flex flex-col justify-center order-1 md:order-1" data-aos="fade-right">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Message from Our CEO</h2>
+        <div class="ceo-quote text-gray-300 text-justify space-y-3 sm:space-y-4">
+          <p>
+            At TrendCrafters, we don't just follow trends, we create them.
+            Our journey began with a single vision: to redefine how brands connect, grow, and inspire in the digital era.
+          </p>
+          <p>
+            As a young entrepreneur, I believe innovation thrives where creativity meets courage. TrendCrafters is built on that belief, a team of dreamers, designers, and digital thinkers shaping ideas into movements.
+          </p>
+          <p>
+            Every project we take on is more than just marketing; it's storytelling, strategy, and soul combined. We empower businesses to not only be seen, but to be remembered.
+          </p>
+          <p>
+            This is just the beginning. The world is moving fast, and we're here to move faster, crafting trends that define the future.
+          </p>
+        </div>
+        <div class="mt-4 sm:mt-6">
+          <p class="text-orange-400 font-semibold text-base sm:text-lg">— Saksham Karki</p>
+          <p class="text-gray-400 text-sm sm:text-base">Founder & CEO, TrendCrafters</p>
+        </div>
+      </div>
+
+      <!-- CEO Image -->
+      <div class="relative flex flex-col justify-center items-center mt-6 md:mt-0 order-2 md:order-2" data-aos="fade-left" data-aos-delay="200">
+        <!-- Background Gradient -->
+        <div class="absolute  rounded-lg animate-float"></div>
+
+        <!-- Image -->
+        <div class="relative rounded-lg transform hover:scale-105 transition-transform duration-700 overflow-hidden w-full max-w-[1000px]">
+          <img 
+            src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6pNaF1T8sT2fJSUNuCrFDORIybgi6t7Q3q1xB" 
+            alt="Saksham Karki - Founder & CEO of TrendCrafters" 
+            class="w-[700px] h-[500px] sm:h-[350px] md:h-[400px] lg:h-[550px] object-cover rounded-2xl"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Name below the image -->
+        <div class="mt-4 text-center">
+          <p class="text-white font-semibold text-base sm:text-lg">Saksham Karki</p>
+          <p class="text-gray-400 text-sm sm:text-base">Founder & CEO</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Why Trend Crafters Section -->
+<section class="max-w-6xl mx-auto content-container py-medium" data-aos="fade-up">
+  <div class="text-center mb-12">
+    <h2 
+      class="text-4xl font-extrabold text-white mb-4 gradient-text"
+      data-aos="zoom-in"
+    >
+      WHY TREND CRAFTERS
+    </h2>
+    <p class="text-gray-400 max-w-3xl mx-auto text-lg">
+      We combine creativity and strategy to craft digital experiences that move people and elevate brands.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    <!-- Creative Precision -->
+    <div 
+      class="service-card group"
+      data-aos="fade-right"
+      data-aos-delay="100"
+    >
+      <h3 class="text-2xl font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors">
+        🎨 Creative Precision
+      </h3>
+      <p class="text-gray-300 leading-relaxed">
+        Every detail matters, from visuals to voice, we craft content that aligns perfectly with your brand identity.
+      </p>
+      <div class="mt-4 w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+    </div>
+
+    <!-- Strategic Insight -->
+    <div 
+      class="service-card group"
+      data-aos="fade-left"
+      data-aos-delay="150"
+    >
+      <h3 class="text-2xl font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors">
+        📊 Strategic Insight
+      </h3>
+      <p class="text-gray-300 leading-relaxed">
+        Our ideas are backed by research, audience understanding, and clear strategies that deliver measurable results.
+      </p>
+      <div class="mt-4 w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+    </div>
+
+    <!-- Proven Impact -->
+    <div 
+      class="service-card group"
+      data-aos="fade-right"
+      data-aos-delay="200"
+    >
+      <h3 class="text-2xl font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors">
+        🚀 Proven Impact
+      </h3>
+      <p class="text-gray-300 leading-relaxed">
+        We create content that not only looks good but performs, driving engagement, growth, and recognition across platforms.
+      </p>
+      <div class="mt-4 w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+    </div>
+
+    <!-- Collaborative Process -->
+    <div 
+      class="service-card group"
+      data-aos="fade-left"
+      data-aos-delay="250"
+    >
+      <h3 class="text-2xl font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors">
+        🤝 Collaborative Process
+      </h3>
+      <p class="text-gray-300 leading-relaxed">
+        We partner closely with clients, turning their visions into powerful stories that connect and endure.
+      </p>
+      <div class="mt-4 w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision & Mission Section -->
+<section class="py-medium bg-gradient-to-b from-gray-800 via-gray-900 to-black">
+  <div class="content-container text-center">
+    <div class="max-w-4xl mx-auto mb-12" data-aos="fade-up">
+      <h2 class="text-4xl font-bold text-white mb-6">Our Vision & Mission</h2>
+      <p class="text-gray-400 leading-relaxed">
+        We envision a world where creativity drives business growth and storytelling shapes how brands connect with people. 
+        Our mission is to empower businesses to communicate authentically through content that captivates, informs, and inspires.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="service-card" data-aos="fade-right">
+        <h3 class="text-2xl font-semibold text-orange-400 mb-4">Our Vision</h3>
+        <p class="text-gray-300 leading-relaxed">
+          To be a leader in digital storytelling by pushing the boundaries of innovation and creativity, inspiring brands to express their voice with purpose and passion.
+        </p>
+      </div>
+
+      <div class="service-card" data-aos="fade-left">
+        <h3 class="text-2xl font-semibold text-orange-400 mb-4">Our Mission</h3>
+        <p class="text-gray-300 leading-relaxed">
+          To craft meaningful narratives that elevate brands, connect with audiences, and drive impactful change through visual storytelling and strategic content.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR SERVICES Section -->
+<section class="bg-gray-900 text-white py-compact" id="services">
+  <div class="content-container text-center mb-12" data-aos="fade-up">
+    <h2 class="text-4xl font-extrabold mb-4">
+      OUR <span class="gradient-text">SERVICES</span>
+    </h2>
+    <p class="text-gray-400 max-w-2xl mx-auto">
+      We combine creativity, strategy, and technology to help your brand grow in the digital world.
+    </p>
+    <div class="mt-4 w-24 h-1 mx-auto bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+  </div>
+
+  <div class="content-container grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <!-- 1. Social Media Management -->
+    <div 
+      class="service-card"
+      data-aos="fade-up" data-aos-delay="100"
+    >
+      <h3 class="text-2xl font-semibold mb-3 text-orange-400">1. Social Media Management</h3>
+      <p class="text-gray-300 leading-relaxed">
+        From content planning to daily posting, engagement, and analytics, we handle your social media so you can focus on your business.
+      </p>
+    </div>
+
+    <!-- 2. Content Strategy -->
+    <div 
+      class="service-card"
+      data-aos="fade-up" data-aos-delay="200"
+    >
+      <h3 class="text-2xl font-semibold mb-3 text-orange-400">2. Content Strategy</h3>
+      <p class="text-gray-300 leading-relaxed">
+        We create a customized content roadmap that aligns with your goals, connecting creativity with strategy for real results.
+      </p>
+    </div>
+
+    <!-- 3. Reels & Video Content -->
+    <div 
+      class="service-card"
+      data-aos="fade-up" data-aos-delay="300"
+    >
+      <h3 class="text-2xl font-semibold mb-3 text-orange-400">3. Reels & Video Content</h3>
+      <p class="text-gray-300 leading-relaxed">
+        High-quality, story-driven reels and videos designed to grab attention and go viral.
+      </p>
+    </div>
+
+    <!-- 4. Commercial Ads -->
+    <div 
+      class="service-card"
+      data-aos="fade-up" data-aos-delay="400"
+    >
+      <h3 class="text-2xl font-semibold mb-3 text-orange-400">4. Commercial Ads</h3>
+      <p class="text-gray-300 leading-relaxed">
+        Professional ad production, from concept to final cut. We help your brand look premium and feel powerful.
+      </p>
+    </div>
+
+    <!-- 5. Brand Boosting & Campaigns -->
+    <div 
+      class="service-card"
+      data-aos="fade-up" data-aos-delay="500"
+    >
+      <h3 class="text-2xl font-semibold mb-3 text-orange-400">5. Brand Boosting & Campaigns</h3>
+      <p class="text-gray-300 leading-relaxed">
+        From ad boosting to influencer collaborations, we make sure your content reaches the right audience at the right time.
+      </p>
+    </div>
+
+    <!-- 6. Brand Storytelling -->
+    <div 
+      class="service-card"
+      data-aos="fade-up" data-aos-delay="600"
+    >
+      <h3 class="text-2xl font-semibold mb-3 text-orange-400">6. Brand Storytelling</h3>
+      <p class="text-gray-300 leading-relaxed">
+        We shape your brand's voice through meaningful visuals and words, because your story deserves to be told right.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- What We Do Section -->
+<section class="py-compact bg-gradient-to-b from-black via-gray-900 to-gray-800">
+  <div class="content-container">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-4xl font-bold text-white mb-4">What We Do</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        We provide end-to-end creative and production solutions that help brands grow through engaging, data-driven storytelling.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="service-card text-center hover:-translate-y-2 transition-all duration-500" data-aos="zoom-in">
+        <i class="fas fa-video text-4xl text-orange-400 mb-4"></i>
+        <h3 class="text-xl font-semibold text-white mb-2">Media Production</h3>
+        <p class="text-gray-400">We create cinematic video ads, brand reels, and creative shoots that capture your brand's story.</p>
+      </div>
+
+      <div class="service-card text-center hover:-translate-y-2 transition-all duration-500" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-bullhorn text-4xl text-orange-400 mb-4"></i>
+        <h3 class="text-xl font-semibold text-white mb-2">Digital Marketing</h3>
+        <p class="text-gray-400">We manage campaigns, social media strategies, and online branding for measurable growth.</p>
+      </div>
+
+      <div class="service-card text-center hover:-translate-y-2 transition-all duration-500" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-brain text-4xl text-orange-400 mb-4"></i>
+        <h3 class="text-xl font-semibold text-white mb-2">Creative Strategy</h3>
+        <p class="text-gray-400">From ideation to design, we shape creative directions that align with your business goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partners Section -->
+<section class="py-medium bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+  <!-- Floating background gradients -->
+  <div class="absolute top-0 left-0 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-tr from-orange-500/20 to-red-500/20 blur-3xl opacity-40 animate-float"></div>
+  <div class="absolute bottom-0 right-0 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-br from-red-500/20 to-orange-500/20 blur-3xl opacity-40 animate-float"></div>
+
+  <div class="content-container text-center relative z-10">
+    <h2 class="text-4xl sm:text-5xl font-bold text-white mb-8" data-aos="fade-up">Our Partners & Collaborations</h2>
+    <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto mb-10 text-justify" data-aos="fade-up" data-aos-delay="100">
+      We've proudly collaborated with forward-thinking brands, agencies, and influencers who trust us to bring their vision to life.
+    </p>
+
+    <section class="max-w-6xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Recent Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <!-- CNC Metal & Wood Craft -->
+        <div class="rounded-3xl overflow-hidden shadow-lg group hover:scale-105 transition-transform bg-white">
+          <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6rTrm4up0Bqw1lxtCXY9EMebkf2OcUyVgDjG6" class="w-full  h-56 sm:h-64 object-cover group-hover:opacity-90 transition" loading="lazy">
+          <div class="p-4 bg-gray-900">
+            <h3 class="font-semibold text-lg sm:text-xl text-orange-400">CNC Metal & Wood Craft</h3>
+            <p class="text-xs sm:text-sm text-gray-200 text-justify">🎥 Modern Design | Traditional Artistry <br>
+Where technology meets tradition, crafting bespoke metal and wooden décor that blends precision CNC engineering with Nepali heritage.
+</p>
+          </div>
+        </div>
+
+        <!-- Changan Nepal -->
+        <div class="rounded-3xl overflow-hidden shadow-lg group hover:scale-105 transition-transform bg-white">
+          <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6x6LqEKnHpLljrqaJPhzsuZIgb1ONciD32W8M" class="w-full h-56 sm:h-64 object-cover group-hover:opacity-90 transition" loading="lazy">
+          <div class="p-4 bg-gray-900">
+            <h3 class="font-semibold text-lg sm:text-xl text-orange-400">Changan Nepal</h3>
+            <p class="text-xs sm:text-sm text-gray-200 text-justify">🎥 Automotive Cinematics | Innovation <br>
+Dynamic visuals capturing the power, design, and innovation behind It's next-generation driving experience.
+</p>
+          </div>
+        </div>
+
+        <!-- Himalayan Java Coffee -->
+        <div class="rounded-3xl overflow-hidden shadow-lg group hover:scale-105 transition-transform bg-white">
+          <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6TbtNsGqFMgjlypxJUmR56N0dCiHbhoZAYf2r" class="w-60px h-56 sm:h-64 sm:w:full pl-4 object-cover group-hover:opacity-90 transition" loading="lazy">
+          <div class="p-4 bg-gray-900">
+            <h3 class="font-semibold text-lg sm:text-xl text-orange-400">Himalayan Java Coffee</h3>
+            <p class="text-xs sm:text-sm text-gray-200 text-justify">🎥 Brand Storytelling | Café Culture <br>
+Immersive narratives celebrating the aroma, creativity, and soulful ambience that define Nepal's coffee movement.
+</p>
+          </div>
+        </div>
+
+        <!-- Threads & Trends -->
+        <div class="rounded-3xl overflow-hidden shadow-lg group hover:scale-105 transition-transform bg-white">
+          <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6FPP6HnfLXlSO27gtJBnqy9Dd8acQiuIW3YHx" class="w-full h-56 sm:h-64 object-cover group-hover:opacity-90 transition" loading="lazy">
+          <div class="p-4 bg-gray-900">
+            <h3 class="font-semibold text-lg sm:text-xl text-orange-400">Threads & Trends</h3>
+            <p class="text-xs sm:text-sm text-gray-200">🎥 Lifestyle Visuals | Street & Sports Fashion <br>
+Showcasing authentic Nike and Adidas originals, redefining urban style through bold visuals and motion storytelling.
+            </p>
+          </div>
+        </div>
+
+        <!-- ISP -->
+        <div class="rounded-3xl overflow-hidden shadow-lg group hover:scale-105 transition-transform bg-white">
+          <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ68aPEblBHrLzgEmlavGisf7eIq0bYM52Auj9k" class="w-full h-56 sm:h-64 object-cover group-hover:opacity-90 transition" loading="lazy">
+          <div class="p-4 bg-gray-900">
+            <h3 class="font-semibold text-lg sm:text-xl text-orange-400">ISP (International Study Partners)</h3>
+            <p class="text-xs sm:text-sm text-gray-200">🎥 Educational Branding | Global Vision <br>
+Compelling visuals that inspire students to explore global opportunities and pursue academic success with confidence.
+</p>
+          </div>
+        </div>
+
+        <!-- PIEC -->
+        <div class="rounded-3xl overflow-hidden shadow-lg group hover:scale-105 transition-transform bg-white">
+          <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6kVYcwQDT8Uxw0bXOW6fc1CoLNVZnBJAaY9hl" class="pl-[60px] w-50 h-56 sm:h-64 object-cover group-hover:opacity-90 transition" loading="lazy">
+          <div class="p-4 bg-gray-900">
+            <h3 class="font-semibold text-lg sm:text-xl text-orange-400">PIEC</h3>
+            <p class="text-xs sm:text-sm text-gray-200">🎥 Brand Campaign | Study Abroad Excellence <br>
+Emotive storytelling that connects ambition with opportunity, empowering learners to chase their dreams worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-20 bg-black/80">
+  <div class="w-full px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+    <h2 class="text-4xl font-bold text-white mb-6">Let's Build Something Great Together</h2>
+    <p class="text-white/90 mb-8">Your brand deserves to stand out. Let's make it unforgettable.</p>
+    <a href="{% url 'contact' %}" 
+       class="btn-primary">
+      Get in Touch
+    </a>
+  </div>
+</section>
+
+{% endblock %}

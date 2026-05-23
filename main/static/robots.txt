@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap (update with your production URL)
+Sitemap: https://trendcrafters.global/sitemap.xml
