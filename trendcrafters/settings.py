@@ -22,7 +22,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config(
     'ALLOWED_HOSTS',
-    default='localhost,127.0.0.1,trendcrafters.global,www.trendcrafters.global'
+    default='localhost,127.0.0.1,yourdomain.com,www.yourdomain.com'
 ).split(',')
 
 # During local development it's convenient to allow all hosts when DEBUG is True
@@ -34,8 +34,9 @@ if DEBUG:
     ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://trendcrafters.global',
-    'https://www.trendcrafters.global',
+    'https://yourdomain.com',
+    'https://www.yourdomain.com',
+    'https://*.yourdomain.com',  # For subdomains if needed
 ]
 
 # -----------------------------------------------------------
@@ -138,18 +139,39 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='trendcraftersglobal@gmail.c
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='xawx gwdm wddi thqu')
 
 # -----------------------------------------------------------
-# SECURITY ENHANCEMENTS (PRODUCTION)
+# SECURITY ENHANCEMENTS (PRODUCTION - CRITICAL FOR SSL/HTTPS)
 # -----------------------------------------------------------
+
+# ===== SSL/HTTPS SETTINGS =====
+# Enable HTTPS redirect (HTTP → HTTPS)
+# NOTE: Nginx already handles the 301 redirect at the proxy level
+# This setting is for additional Django-level protection
 SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=True, cast=bool)
+
+# Ensure secure cookie transmission only over HTTPS
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+
+# Security headers
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# HSTS (HTTP Strict Transport Security) - forces HTTPS for 1 year
+# WARNING: Only enable after confirming HTTPS is working!
+# Uncomment these lines after successful HTTPS deployment and testing:
 SECURE_HSTS_SECONDS = 31536000  # 1 year
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
-X_FRAME_OPTIONS = 'DENY'
+
+# ===== CLOUDFLARE PROXY TRUST SETTING (CRITICAL) =====
+# This tells Django to trust the X-Forwarded-Proto header from Nginx
+# Nginx receives X-Forwarded-Proto from Cloudflare (or sets it itself)
+# This prevents mixed content and ensures Django knows the request is HTTPS
+# Format: (HEADER_NAME, VALUE_TO_MATCH)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Clickjacking protection
+X_FRAME_OPTIONS = 'DENY'
 
 # -----------------------------------------------------------
 # CACHE SETTINGS
