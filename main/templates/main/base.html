@@ -63,7 +63,7 @@
         "@type": "Organization",
         "name": "Trend Crafters Global",
         "url": "https://trendcrafters.global/",
-        "logo": "{% block org_logo %}{{ request.scheme }}://{{ request.get_host }}{% static 'main/images/logo.png' %}{% endblock %}",
+        "logo": "{% static 'main/images/logo_transparent.png' %}",
         "sameAs": [
             "https://www.facebook.com/",
             "https://www.instagram.com/",
@@ -85,7 +85,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center space-x-2">
                     <a href="{% url 'index' %}" class="flex items-center">
-                        <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6xGxit3HpLljrqaJPhzsuZIgb1ONciD32W8MT"
+                        <img src="{% static 'main/images/logo_transparent_black.png' %}"
                              alt="TrendCrafters Logo"
                              class="h-16 sm:h-24 w-auto"
                              loading="lazy">
@@ -190,7 +190,7 @@
 
                 <div class="space-y-5 text-center sm:text-left">
                     <div class="flex flex-col items-center sm:items-start space-y-3">
-                        <img src="https://qqazonq8eu.ufs.sh/f/y5kFsPOhkGJ6nqxc8s61JM4zXBk5cfUxGDZvYbCaSPsKEA0h"
+                        <img src="{% static 'main/images/logo_transparent.png' %}"
                              alt="TrendCrafters Logo"
                              class="h-20 sm:h-24 lg:h-28 w-auto max-w-[220px] object-contain"
                              loading="lazy">
